@@ -39,22 +39,6 @@ public class UserService {
         }
     }
      
-	/*
-	 * public EmployeeEntity createOrUpdateEmployee(EmployeeEntity entity) throws
-	 * RecordNotFoundException { Optional<EmployeeEntity> employee =
-	 * repository.findById(entity.getId());
-	 * 
-	 * if(employee.isPresent()) { EmployeeEntity newEntity = employee.get();
-	 * newEntity.setEmail(entity.getEmail()); newEntity.setName(entity.getName());
-	 * // newEntity.setLastName(entity.getLastName());
-	 * 
-	 * newEntity = repository.save(newEntity);
-	 * 
-	 * return newEntity; } else { entity = repository.save(entity);
-	 * 
-	 * return entity; } }
-	 */
-     
     public void deleteUserById(Long id) throws RecordNotFoundException
     {
         Optional<UserEntity> user = repository.findById(id);
